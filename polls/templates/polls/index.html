@@ -10,14 +10,17 @@
     <title>Index Polls</title>
 </head>
 <body>
-    {% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+    <div class="container d-flex flex-column align-items-center justify-content-center ">
+        <img src="https://i.ibb.co/bJ0ng71/icon-mi-megafono-removebg-preview.png" alt="logo">
+        {% if latest_question_list %}
+            <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>No polls are available.</p>
+        {% endif %}
+    </div>
 </body>
 </html>

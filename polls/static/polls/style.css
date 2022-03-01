@@ -1,10 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 :root{
     --letter-color: #494949;
     --letter-color-links: #1A1A1A;
-    --bg-footer-color: #F0F0F0;
-    --bg-div-color: #E2E2E2;
-    --bg-color: #FFFFFF;
-    --button-color: #0047FF;
-    --box-shadow-color: #D2D2D2;
-    --letter-red: #F32e2e
+    --bg-div-color: #F3F3F3;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+}
+.container{
+    width: 70%;
+    margin: 300px auto;
+    background-color: var(--bg-div-color);
+    font-size: 40px ;
+    border-radius: 8px;
+    padding: 12px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--letter-color);
+    font-weight: 500;
+}
+a:hover{
+    color: var(--letter-color-links);
+    font-weight: 700;
 }

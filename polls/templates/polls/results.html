@@ -10,13 +10,17 @@
     <title>Results Poll</title>
 </head>
 <body>
-    <h1> {{ question.question_text }} </h1>
-<ul>
-    {% for choice in question.choice_set.all %}
-        <li> {{ choice.choice_text }} -- {{ choice.votes }} vote {{ choice.votes|pluralize }} </li>
-    {% endfor %}
-</ul>
-<a href="{% url 'polls:detail' question.id  %}"> Vote again? </a>
-<a href="{% url 'polls:presentation' question.id %}"> Prueba </a>
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+        <img src="https://i.ibb.co/bJ0ng71/icon-mi-megafono-removebg-preview.png" alt="logo">
+        <h1 class="mt-2"> {{ question.question_text }} </h1>
+            <ul>
+                {% for choice in question.choice_set.all %}
+                    <li> {{ choice.choice_text }} - <strong> {{ choice.votes }} vote{{ choice.votes|pluralize }} </strong> </li>
+                {% endfor %}
+            </ul>
+        <a class="mt-1" href="{% url 'polls:detail' question.id  %}"> Vote again? </a>
+        <a href="{% url 'polls:presentation' question.id %}"> Go to presentation's view </a>
+    </div>
+
 </body>
 </html>

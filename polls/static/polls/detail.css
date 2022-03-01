@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root{
+    --letter-color: #494949;
+    --bg-div-color: #E2E2E2;
+    --bg-color: #FFFFFF;
+    --button-color: #0047FF;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+}
+.container{
+    width: 70%;
+    margin: 200px auto;
+    background-color: var(--bg-div-color);
+    font-size: 28px ;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    color: var(--letter-color);
+}
+.btn{
+    background-color: var(--button-color);
+    width: 240px;
+    height: 48px;
+    font-size: 20px;
+    color: var(--bg-color);
+    font-weight: 500;
+    border: 1px solid transparent;
+    line-height: 14.4px;
+    padding: 0 48px;
+}
+.btn:hover{
+    background-color: #011b5e;
+    color: var(--bg-color);
+}
